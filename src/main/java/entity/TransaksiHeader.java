@@ -4,22 +4,24 @@ import lombok.Data;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import utils.Crud;
 import utils.HibernateUtilities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "adit_master_transaksi_header", uniqueConstraints = {@UniqueConstraint(columnNames = {"nomor_bon"})})
-@Data public class TransaksiHeader {
+@Data public class TransaksiHeader extends Crud<TransaksiHeader> implements Serializable {
 
     @Id
     @Column(name = "nomor_bon", nullable = false, unique = true)
     private int nomorBon;
 
     @Column(name = "tanggal_bon")
-    private String tanngalBon;
+    private String tanggalBon;
 
     @Column(name = "bagian")
     private String bagianPeminta;
@@ -34,79 +36,39 @@ import java.util.Set;
     // --------------------------------------------------------------------------------------------------
     // # C R U D  --
     // --------------------------------------------------------------------------------------------------
-    public static void insertHeader(TransaksiHeader header) {
+    @Override
+    public void insert(TransaksiHeader entity) {
         SessionFactory sessionFactory = HibernateUtilities.getSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction tx;
 
         tx = session.beginTransaction();
-        session.save(header);
+        session.save(entity);
         tx.commit();
         sessionFactory.close();
     }
 
-    public static void updateHeader(TransaksiHeader header) {
+    @Override
+    public void update(TransaksiHeader entity) {
         SessionFactory sessionFactory = HibernateUtilities.getSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction tx;
 
         tx = session.beginTransaction();
-        session.update(header);
+        session.update(entity);
         tx.commit();
         sessionFactory.close();
     }
 
-    public static void deleteHeader(TransaksiHeader header) {
+    @Override
+    public void delete(TransaksiHeader entity) {
         SessionFactory sessionFactory = HibernateUtilities.getSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction tx;
 
         tx = session.beginTransaction();
-        session.delete(header);
+        session.delete(entity);
         tx.commit();
         sessionFactory.close();
-    }
-
-    // --------------------------------------------------------------------------------------------------
-    // # SETTER GETTER  --
-    // --------------------------------------------------------------------------------------------------
-    public int getNomorBon() {
-        return nomorBon;
-    }
-
-    public void setNomorBon(int nomorBon) {
-        this.nomorBon = nomorBon;
-    }
-
-    public String getTanngalBon() {
-        return tanngalBon;
-    }
-
-    public void setTanngalBon(String tanngalBon) {
-        this.tanngalBon = tanngalBon;
-    }
-
-    public String getBagianPeminta() {
-        return bagianPeminta;
-    }
-
-    public void setBagianPeminta(String bagianPeminta) {
-        this.bagianPeminta = bagianPeminta;
-    }
-
-    public String getKeterangan() {
-        return keterangan;
-    }
-
-    public void setKeterangan(String keterangan) {
-        this.keterangan = keterangan;
-    }
-
-    public Set<TransaksiDetail> getDetail() {
-        return detail;
-    }
-
-    public void setDetail(Set<TransaksiDetail> detail) {
-        this.detail = detail;
     }
 }

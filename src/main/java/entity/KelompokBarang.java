@@ -6,22 +6,24 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.annotations.GenericGenerator;
 import utils.AppHelper;
+import utils.Crud;
 import utils.HibernateUtilities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
 
 @Entity
 @Table(name = "adit_master_kelompok_barang", uniqueConstraints = {@UniqueConstraint(columnNames = {"id_kelompok"})})
-@Data public class KelompokBarang {
+@Data public class KelompokBarang extends Crud<KelompokBarang> implements Serializable {
 
     @Id
     @GenericGenerator(name = "auto", strategy = "increment")
     @GeneratedValue(generator = "auto")
     @Column(name = "id_kelompok", nullable = false, unique = true)
-    private int idKelompokBarang;
+    private long idKelompokBarang;
 
     @OneToMany(mappedBy = "idKelompokBarang", cascade = {CascadeType.ALL})
     private Set<Barang> barang = new HashSet<>();
@@ -48,38 +50,40 @@ import java.util.Set;
     // --------------------------------------------------------------------------------------------------
     // # C R U D  --
     // --------------------------------------------------------------------------------------------------
-    public static void insertKelompokBarang(KelompokBarang kelompokBarang) {
+    @Override
+    public void insert(KelompokBarang entity) {
         SessionFactory sessionFactory = HibernateUtilities.getSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction tx;
 
         tx = session.beginTransaction();
-        session.save(kelompokBarang);
+        session.save(entity);
         tx.commit();
         // sessionFactory.close();
     }
 
-    public static void updateKelompokBarang(KelompokBarang kelompokBarang) {
+    @Override
+    public void update(KelompokBarang entity) {
         SessionFactory sessionFactory = HibernateUtilities.getSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction tx;
 
         tx = session.beginTransaction();
-        session.update(kelompokBarang);
+        session.update(entity);
         tx.commit();
         // sessionFactory.close();
     }
 
-    public static void deleteKelompokBarang(KelompokBarang kelompokBarang) {
+    @Override
+    public void delete(KelompokBarang entity) {
         SessionFactory sessionFactory = HibernateUtilities.getSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction tx;
 
         tx = session.beginTransaction();
-        session.delete(kelompokBarang);
+        session.delete(entity);
         tx.commit();
         // sessionFactory.close();
     }
-
 
 }

@@ -4,12 +4,12 @@ import entity.KelompokBarang;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import utils.Dao;
 import utils.HibernateUtilities;
+import utils.Repository;
 
 import java.util.List;
 
-@Dao(KelompokBarang.class)
+@Repository(KelompokBarang.class)
 public class KelompokBarangDao {
     private SessionFactory sessionFactory = HibernateUtilities.getSessionFactory();
     private Session session;
@@ -35,8 +35,7 @@ public class KelompokBarangDao {
 
     // GET BY KODE
     public KelompokBarang getByKode(String kode) {
-        SessionFactory sessionFactory = HibernateUtilities.getSessionFactory();
-        Session session = sessionFactory.openSession();
+        session = sessionFactory.openSession();
         Query query = session.createQuery("FROM KelompokBarang WHERE kodeKelompokBarang = :kode");
         query.setString("kode", kode);
         return (KelompokBarang) query.uniqueResult();

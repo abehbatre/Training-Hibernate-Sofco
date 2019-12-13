@@ -10,9 +10,10 @@ import utils.HibernateUtilities;
  *
  * @author <AdityaPratama>
  * @version 0.1
- * <p>
- * -------------------------------------------------------------------------------
+ * @since April 2019
  * @project training_hibernate_tiga
+ *
+ * -------------------------------------------------------------------------------
  */
 
 public class Main {

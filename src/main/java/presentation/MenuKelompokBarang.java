@@ -5,7 +5,6 @@ import dao.KelompokBarangDao;
 import entity.Barang;
 import entity.KelompokBarang;
 
-import javax.inject.Inject;
 import java.util.List;
 import java.util.Scanner;
 
@@ -74,20 +73,26 @@ class MenuKelompokBarang {
         List<KelompokBarang> kelompokBarangList = kelompokBarangDao.getAllList();
 
         for (KelompokBarang kelompokBarang : kelompokBarangList) {
-            System.out.println("");
+            System.out.println(DELI);
             System.out.println("ID      : " + kelompokBarang.getIdKelompokBarang());
             System.out.println("Kode    : " + kelompokBarang.getKodeKelompokBarang());
             System.out.println("Nama    : " + kelompokBarang.getNamaKelompokBarang());
         }
 
         System.out.print("Input ID kelompok barang untuk cari kelompok barang : ");
-        long keyword = input.nextLong();
-        // showKelompokBarangById(keyword);
+        long i = input.nextLong();
+        showById(i);
     }
 
     /* -- SHOW BY ID -- */
     private void showById(long i) {
+        KelompokBarangDao kelompokBarangDao = new KelompokBarangDao();
+        KelompokBarang kelompokBarang = kelompokBarangDao.getById(i);
 
+        System.out.println(DELI);
+        System.out.println("ID Kelompok Barang   : " + kelompokBarang.getIdKelompokBarang());
+        System.out.println("Kode Kelompok Barang : " + kelompokBarang.getKodeKelompokBarang());
+        System.out.println("Nama Kelompok Barang : " + kelompokBarang.getNamaKelompokBarang());
     }
 
     /* -- INSERT -- */
@@ -152,7 +157,7 @@ class MenuKelompokBarang {
         System.out.println("Update Kelompok Barang");
         System.out.println(DELI);
         System.out.print("ID kelompok Barang yang akan diubah : ");
-        kelompokBarang.setIdKelompokBarang(input.nextInt());
+        kelompokBarang.setIdKelompokBarang(input.nextLong());
         System.out.print("Kode kelompok Barang : ");
         kelompokBarang.setKodeKelompokBarang(input.next());
         System.out.print("Nama kelompok Barang : ");
@@ -163,6 +168,14 @@ class MenuKelompokBarang {
 
     /* -- DELETE --*/
     private void delete() {
+        KelompokBarangBL kelompokBarangBl = new KelompokBarangBL();
+        KelompokBarang kelompokBarang = new KelompokBarang();
+        System.out.println(DELI);
+        System.out.println("Delete Kelompok Barang");
+        System.out.println(DELI);
+        System.out.print("ID kelompok Barang yang akan dihapus : ");
+        kelompokBarang.setIdKelompokBarang(input.nextLong());
 
+        kelompokBarangBl.postDelete(kelompokBarang);
     }
 }
