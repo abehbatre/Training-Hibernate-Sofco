@@ -1,6 +1,5 @@
 package entity;
 
-import lombok.Data;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -12,7 +11,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "adit_master_transaksi_detail", uniqueConstraints = {@UniqueConstraint(columnNames = {"nomor_bon"})})
-@Data public class TransaksiDetail extends Crud<TransaksiDetail> implements Serializable {
+public class TransaksiDetail extends Crud<TransaksiDetail> implements Serializable {
     @Id
     @ManyToOne
     @JoinColumn(name = "nomor_bon", referencedColumnName = "nomor_bon", nullable = false, unique = true)
@@ -70,5 +69,57 @@ import java.io.Serializable;
         session.delete(entity);
         tx.commit();
         sessionFactory.close();
+    }
+
+
+    // --------------------------------------------------------------------------------------------------
+    // # SETTER GETTER --
+    // --------------------------------------------------------------------------------------------------
+    public TransaksiHeader getNomorBon() {
+        return nomorBon;
+    }
+
+    public void setNomorBon(TransaksiHeader nomorBon) {
+        this.nomorBon = nomorBon;
+    }
+
+    public String getKodeBarang() {
+        return kodeBarang;
+    }
+
+    public void setKodeBarang(String kodeBarang) {
+        this.kodeBarang = kodeBarang;
+    }
+
+    public int getJumlahBarang() {
+        return jumlahBarang;
+    }
+
+    public void setJumlahBarang(int jumlahBarang) {
+        this.jumlahBarang = jumlahBarang;
+    }
+
+    public String getUnit() {
+        return unit;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
+
+    public int getJumlahDalamStok() {
+        return jumlahDalamStok;
+    }
+
+    public void setJumlahDalamStok(int jumlahDalamStok) {
+        this.jumlahDalamStok = jumlahDalamStok;
+    }
+
+    public String getUnitStok() {
+        return unitStok;
+    }
+
+    public void setUnitStok(String unitStok) {
+        this.unitStok = unitStok;
     }
 }

@@ -1,6 +1,5 @@
 package entity;
 
-import lombok.Data;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -17,7 +16,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "adit_master_kelompok_barang", uniqueConstraints = {@UniqueConstraint(columnNames = {"id_kelompok"})})
-@Data public class KelompokBarang extends Crud<KelompokBarang> implements Serializable {
+public class KelompokBarang extends Crud<KelompokBarang> implements Serializable {
 
     @Id
     @GenericGenerator(name = "auto", strategy = "increment")
@@ -86,4 +85,55 @@ import java.util.Set;
         // sessionFactory.close();
     }
 
+
+    // --------------------------------------------------------------------------------------------------
+    // # SETTER GETTER --
+    // --------------------------------------------------------------------------------------------------
+    public long getIdKelompokBarang() {
+        return idKelompokBarang;
+    }
+
+    public void setIdKelompokBarang(long idKelompokBarang) {
+        this.idKelompokBarang = idKelompokBarang;
+    }
+
+    public Set<Barang> getBarang() {
+        return barang;
+    }
+
+    public void setBarang(Set<Barang> barang) {
+        this.barang = barang;
+    }
+
+    public String getKodeKelompokBarang() {
+        return kodeKelompokBarang;
+    }
+
+    public void setKodeKelompokBarang(String kodeKelompokBarang) {
+        this.kodeKelompokBarang = kodeKelompokBarang;
+    }
+
+    public String getNamaKelompokBarang() {
+        return namaKelompokBarang;
+    }
+
+    public void setNamaKelompokBarang(String namaKelompokBarang) {
+        this.namaKelompokBarang = namaKelompokBarang;
+    }
+
+    public String getCreateAt() {
+        return createAt;
+    }
+
+    public void setCreateAt(String createAt) {
+        this.createAt = createAt;
+    }
+
+    public String getUpdateAt() {
+        return updateAt;
+    }
+
+    public void setUpdateAt(String updateAt) {
+        this.updateAt = updateAt;
+    }
 }

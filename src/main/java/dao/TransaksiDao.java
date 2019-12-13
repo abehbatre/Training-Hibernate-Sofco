@@ -17,6 +17,8 @@ public class TransaksiDao {
     private SessionFactory sessionFactory = HibernateUtilities.getSessionFactory();
     private Session session = sessionFactory.openSession();
 
+
+    // GET BY NOMOR BON -> NATIVE QUERY
     public void getByNomorBon(int nomorBon) {
         session = sessionFactory.openSession();
         SQLQuery query = session.createSQLQuery("" +
@@ -56,7 +58,7 @@ public class TransaksiDao {
     }
 
 
-    // GET BY Nomor Bon
+    // GET BY NOMOR BON
     public TransaksiHeader getByNomborBon(int nomorBon) {
         session = sessionFactory.openSession();
         Query query = session
@@ -64,5 +66,12 @@ public class TransaksiDao {
                 .setParameter("nomorBon", nomorBon);
 
         return (TransaksiHeader) query.uniqueResult();
+    }
+
+    // GET COUNT
+    public long getCount() {
+        session = sessionFactory.openSession();
+        Query query = session.createQuery("SELECT COUNT (nomor_bon) FROM TransaksiHeader");
+        return (long) query.uniqueResult();
     }
 }

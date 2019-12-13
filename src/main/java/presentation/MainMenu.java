@@ -11,7 +11,7 @@ import static utils.AppHelper.clearConsole;
 
 public class MainMenu {
 
-    private static Scanner scanner = new Scanner(System.in);
+    private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) throws AppException {
         new MainMenu();
@@ -29,7 +29,7 @@ public class MainMenu {
             System.out.println("\n0. Exit");
             System.out.println(DELI);
             System.out.print("Pilih: ");
-            int pilihan = scanner.nextInt();
+            int pilihan = input.nextInt();
             System.out.println(DELI);
 
             switch (pilihan) {

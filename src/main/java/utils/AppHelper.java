@@ -51,13 +51,13 @@ public class AppHelper {
         return date != null;
     }
 
-    public static String generateCode() {
+    public static int generateNomorBon() {
         String AB = "0123456789";
         SecureRandom rnd = new SecureRandom();
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < 4; i++) {
             sb.append(AB.charAt(rnd.nextInt(AB.length())));
         }
-        return "A/" + sb.toString();
+        return Integer.parseInt(sb.toString());
     }
 }

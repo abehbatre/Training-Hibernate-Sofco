@@ -14,7 +14,6 @@ class MenuTransaksi {
 
     private static final String TAG = "-- MASTER TRANSAKSI --";
     private static final Scanner input = new Scanner(System.in);
-    private static Scanner scanner = new Scanner(System.in);
 
     private SessionFactory sessionFactory = HibernateUtilities.getSessionFactory();
     private Session session;
@@ -39,7 +38,7 @@ class MenuTransaksi {
             System.out.println("\n0. Back");
             System.out.println(DELI);
             System.out.print("Pilih: ");
-            int pilihan = scanner.nextInt();
+            int pilihan = input.nextInt();
             System.out.println(DELI);
 
             switch (pilihan) {

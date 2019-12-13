@@ -1,6 +1,5 @@
 package entity;
 
-import lombok.Data;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -14,7 +13,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "adit_master_transaksi_header", uniqueConstraints = {@UniqueConstraint(columnNames = {"nomor_bon"})})
-@Data public class TransaksiHeader extends Crud<TransaksiHeader> implements Serializable {
+public class TransaksiHeader extends Crud<TransaksiHeader> implements Serializable {
 
     @Id
     @Column(name = "nomor_bon", nullable = false, unique = true)
@@ -70,5 +69,50 @@ import java.util.Set;
         session.delete(entity);
         tx.commit();
         sessionFactory.close();
+    }
+
+
+
+    // --------------------------------------------------------------------------------------------------
+    // # SETTER GETTER --
+    // --------------------------------------------------------------------------------------------------
+    public int getNomorBon() {
+        return nomorBon;
+    }
+
+    public void setNomorBon(int nomorBon) {
+        this.nomorBon = nomorBon;
+    }
+
+    public String getTanggalBon() {
+        return tanggalBon;
+    }
+
+    public void setTanggalBon(String tanggalBon) {
+        this.tanggalBon = tanggalBon;
+    }
+
+    public String getBagianPeminta() {
+        return bagianPeminta;
+    }
+
+    public void setBagianPeminta(String bagianPeminta) {
+        this.bagianPeminta = bagianPeminta;
+    }
+
+    public String getKeterangan() {
+        return keterangan;
+    }
+
+    public void setKeterangan(String keterangan) {
+        this.keterangan = keterangan;
+    }
+
+    public Set<TransaksiDetail> getDetail() {
+        return detail;
+    }
+
+    public void setDetail(Set<TransaksiDetail> detail) {
+        this.detail = detail;
     }
 }

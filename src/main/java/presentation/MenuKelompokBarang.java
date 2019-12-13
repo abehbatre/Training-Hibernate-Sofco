@@ -16,10 +16,10 @@ class MenuKelompokBarang {
 
     private static final String TAG = "KELOMPOK BARANG";
     private static final Scanner input = new Scanner(System.in);
-    private static Scanner scanner = new Scanner(System.in);
 
-    private KelompokBarangBL kelompokBarangBL;
     private KelompokBarang kelompokBarang;
+    private KelompokBarangBL kelompokBarangBL;
+    private KelompokBarangDao kelompokBarangDao;
     private Barang barang;
 
     void showMenu() {
@@ -37,7 +37,7 @@ class MenuKelompokBarang {
             System.out.println("\n0. Back");
             System.out.println(DELI);
             System.out.print("Pilih: ");
-            int pilihan = scanner.nextInt();
+            int pilihan = input.nextInt();
             System.out.println(DELI);
 
             switch (pilihan) {
@@ -68,8 +68,7 @@ class MenuKelompokBarang {
 
     /* -- SHOW ALL LIST -- */
     private void showList() {
-        KelompokBarangDao kelompokBarangDao = new KelompokBarangDao();
-
+        kelompokBarangDao = new KelompokBarangDao();
         List<KelompokBarang> kelompokBarangList = kelompokBarangDao.getAllList();
 
         for (KelompokBarang kelompokBarang : kelompokBarangList) {
@@ -86,7 +85,7 @@ class MenuKelompokBarang {
 
     /* -- SHOW BY ID -- */
     private void showById(long i) {
-        KelompokBarangDao kelompokBarangDao = new KelompokBarangDao();
+        kelompokBarangDao = new KelompokBarangDao();
         KelompokBarang kelompokBarang = kelompokBarangDao.getById(i);
 
         System.out.println(DELI);
@@ -168,14 +167,15 @@ class MenuKelompokBarang {
 
     /* -- DELETE --*/
     private void delete() {
-        KelompokBarangBL kelompokBarangBl = new KelompokBarangBL();
-        KelompokBarang kelompokBarang = new KelompokBarang();
+        kelompokBarangBL = new KelompokBarangBL();
+        kelompokBarang = new KelompokBarang();
+
         System.out.println(DELI);
         System.out.println("Delete Kelompok Barang");
         System.out.println(DELI);
         System.out.print("ID kelompok Barang yang akan dihapus : ");
         kelompokBarang.setIdKelompokBarang(input.nextLong());
 
-        kelompokBarangBl.postDelete(kelompokBarang);
+        kelompokBarangBL.postDelete(kelompokBarang);
     }
 }

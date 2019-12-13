@@ -1,7 +1,6 @@
 package bl;
 
 import dao.BarangDao;
-import dao.KelompokBarangDao;
 import entity.Barang;
 import lombok.SneakyThrows;
 import utils.AppException;
@@ -32,8 +31,8 @@ public class BarangBL {
 
     /* -- COUNT -- */
     public long getTotalRecord() {
-        KelompokBarangDao dao = new KelompokBarangDao();
-        return dao.getCount();
+        BarangDao barangDao = new BarangDao();
+        return barangDao.getCount();
     }
 
 

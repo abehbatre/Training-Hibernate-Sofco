@@ -35,7 +35,7 @@ public class KelompokBarangBL {
     /* -- DELETE --*/
     public void postDelete(KelompokBarang pojo) {
         checkItemById(pojo.getIdKelompokBarang());
-        this.kelompokBarang.delete(pojo);
+        kelompokBarang.delete(pojo);
     }
 
 

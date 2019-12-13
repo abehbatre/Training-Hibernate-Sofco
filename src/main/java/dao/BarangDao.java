@@ -15,13 +15,17 @@ public class BarangDao {
     private SessionFactory sessionFactory = HibernateUtilities.getSessionFactory();
     private Session session;
 
+
+    // GET ALL LIST
     public List getAllList() {
         session = sessionFactory.openSession();
         Query query = session.createQuery("FROM Barang");
         return (List<Barang>) query.list();
     }
 
-    public Barang filterByName(String keyword) {
+
+    // GET BY NAME
+    public Barang getByName(String keyword) {
         session = sessionFactory.openSession();
         Query query = session
                 .createQuery("FROM Barang WHERE namaBarang LIKE :s")
@@ -37,6 +41,8 @@ public class BarangDao {
         return (Barang) query.uniqueResult();
     }
 
+
+    // GET BY ID
     public Barang getById(Long idBarang) {
         session = sessionFactory.openSession();
         Query query = session
