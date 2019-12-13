@@ -4,9 +4,7 @@ import dao.BarangDao;
 import entity.Barang;
 import lombok.SneakyThrows;
 import utils.AppException;
-import utils.BusinessLogic;
 
-@BusinessLogic
 public class BarangBL {
 
     private Barang barang = new Barang();

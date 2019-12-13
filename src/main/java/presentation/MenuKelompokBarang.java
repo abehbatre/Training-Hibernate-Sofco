@@ -87,11 +87,17 @@ class MenuKelompokBarang {
     private void showById(long i) {
         kelompokBarangDao = new KelompokBarangDao();
         KelompokBarang kelompokBarang = kelompokBarangDao.getById(i);
+        if (kelompokBarang != null) {
+            System.out.println(DELI);
+            System.out.println("ID Kelompok Barang   : " + kelompokBarang.getIdKelompokBarang());
+            System.out.println("Kode Kelompok Barang : " + kelompokBarang.getKodeKelompokBarang());
+            System.out.println("Nama Kelompok Barang : " + kelompokBarang.getNamaKelompokBarang());
+        } else {
+            clearConsole();
+            System.out.println("-- NO DATA --");
+            input.next();
+        }
 
-        System.out.println(DELI);
-        System.out.println("ID Kelompok Barang   : " + kelompokBarang.getIdKelompokBarang());
-        System.out.println("Kode Kelompok Barang : " + kelompokBarang.getKodeKelompokBarang());
-        System.out.println("Nama Kelompok Barang : " + kelompokBarang.getNamaKelompokBarang());
     }
 
     /* -- INSERT -- */
@@ -114,8 +120,6 @@ class MenuKelompokBarang {
             System.out.println(DELI);
             System.out.println("# INPUT BARANG");
             System.out.println(DELI);
-            System.out.print("ID barang          : ");
-            barang.setIdBarang(input.nextLong());
             System.out.print("Kode barang        : ");
             barang.setKodeBarang(input.next());
             System.out.print("Nama barang        : ");
@@ -132,13 +136,12 @@ class MenuKelompokBarang {
             barang.setUnitStok(input.next());
             System.out.print("Status aktif       : ");
             barang.setActiveFlag(input.next());
-            barang.setIdKelompokBarang(kelompokBarang);
+            barang.setKelompokBarang(kelompokBarang);
 
             kelompokBarangBL.postInsertWithDetails(kelompokBarang, barang);
 
         } else if (pilih.equalsIgnoreCase("T")) {
             kelompokBarangBL.postInsert(kelompokBarang);
-
         } else {
             System.out.println("Input tidak dikenali, kembali ke halaman Menu Utama..");
             new MainMenu();

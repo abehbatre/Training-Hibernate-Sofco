@@ -5,12 +5,11 @@ import entity.Barang;
 import entity.KelompokBarang;
 import lombok.SneakyThrows;
 import utils.AppException;
-import utils.BusinessLogic;
 
-@BusinessLogic
 public class KelompokBarangBL {
 
     private KelompokBarang kelompokBarang = new KelompokBarang();
+    private Barang barang = new Barang();
 
 
     /* -- INSERT --*/
@@ -22,8 +21,8 @@ public class KelompokBarangBL {
     /* -- INSERT WITH DETAIL --*/
     public void postInsertWithDetails(KelompokBarang pojo1, Barang pojo2) {
         checkDuplicateCode(pojo1.getKodeKelompokBarang());
-        pojo1.getBarang().add(pojo2);
         kelompokBarang.insert(pojo1);
+        barang.insert(pojo2);
     }
 
     /* -- UPDATE --*/

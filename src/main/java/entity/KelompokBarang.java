@@ -24,7 +24,7 @@ public class KelompokBarang extends Crud<KelompokBarang> implements Serializable
     @Column(name = "id_kelompok", nullable = false, unique = true)
     private long idKelompokBarang;
 
-    @OneToMany(mappedBy = "idKelompokBarang", cascade = {CascadeType.ALL})
+    @OneToMany(mappedBy = "kelompokBarang", cascade = {CascadeType.ALL})
     private Set<Barang> barang = new HashSet<>();
 
     @Column(name = "kode_kelompok")
@@ -49,10 +49,12 @@ public class KelompokBarang extends Crud<KelompokBarang> implements Serializable
     // --------------------------------------------------------------------------------------------------
     // # C R U D  --
     // --------------------------------------------------------------------------------------------------
+    private SessionFactory sessionFactory = HibernateUtilities.getSessionFactory();
+    private Session session;
+
     @Override
     public void insert(KelompokBarang entity) {
-        SessionFactory sessionFactory = HibernateUtilities.getSessionFactory();
-        Session session = sessionFactory.openSession();
+        session = sessionFactory.openSession();
         Transaction tx;
 
         tx = session.beginTransaction();
@@ -63,8 +65,7 @@ public class KelompokBarang extends Crud<KelompokBarang> implements Serializable
 
     @Override
     public void update(KelompokBarang entity) {
-        SessionFactory sessionFactory = HibernateUtilities.getSessionFactory();
-        Session session = sessionFactory.openSession();
+        session = sessionFactory.openSession();
         Transaction tx;
 
         tx = session.beginTransaction();
@@ -75,8 +76,7 @@ public class KelompokBarang extends Crud<KelompokBarang> implements Serializable
 
     @Override
     public void delete(KelompokBarang entity) {
-        SessionFactory sessionFactory = HibernateUtilities.getSessionFactory();
-        Session session = sessionFactory.openSession();
+        session = sessionFactory.openSession();
         Transaction tx;
 
         tx = session.beginTransaction();

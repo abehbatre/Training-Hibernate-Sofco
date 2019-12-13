@@ -9,12 +9,10 @@ import lombok.SneakyThrows;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import utils.AppException;
-import utils.BusinessLogic;
 import utils.HibernateUtilities;
 
 import java.time.LocalDate;
 
-@BusinessLogic
 public class TransaksiBL {
 
     private TransaksiHeader headers = new TransaksiHeader();
@@ -30,17 +28,19 @@ public class TransaksiBL {
     public void postInsertHeaderWithDetail(TransaksiHeader pojo1, TransaksiDetail pojo2) {
         checkDuplicateNomorBon(pojo1.getNomorBon());
         setTanggalBon(pojo1);
-        pojo1.getDetail().add(pojo2);
         setAtributDiDetail(pojo2);
         headers.insert(pojo1);
+        details.insert(pojo2);
     }
 
     public void updateHeader(TransaksiHeader pojo) {
-
+        checkItemByNomorBon(pojo.getNomorBon());
+        headers.update(pojo);
     }
 
     public void deleteHeader(TransaksiHeader pojo) {
-
+        checkItemByNomorBon(pojo.getNomorBon());
+        headers.delete(pojo);
     }
 
 
@@ -103,14 +103,9 @@ public class TransaksiBL {
         int konversi2KeStok = barang.getConvertUnit2ToStock();
 
         switch (unit) {
-            case "unit1":
-                total = jumlah * konversi1Ke2 * konversi2KeStok;
-                break;
-            case "unit2":
-                total = jumlah * konversi2KeStok;
-                break;
-            default:
-                total = jumlah;
+            case "unit1": total = jumlah * konversi1Ke2 * konversi2KeStok; break;
+            case "unit2": total = jumlah * konversi2KeStok; break;
+            default: total = jumlah;
         }
         detail.setJumlahDalamStok(total);
     }

@@ -21,5 +21,6 @@
         <mapping class="entity.Barang"/>
         <mapping class="entity.TransaksiHeader"/>
         <mapping class="entity.TransaksiDetail"/>
+
     </session-factory>
 </hibernate-configuration>

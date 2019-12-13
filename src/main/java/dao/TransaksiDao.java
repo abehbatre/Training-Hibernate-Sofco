@@ -7,11 +7,9 @@ import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import utils.HibernateUtilities;
-import utils.Repository;
 
 import java.util.List;
 
-@Repository({TransaksiHeader.class, TransaksiDetail.class})
 public class TransaksiDao {
 
     private SessionFactory sessionFactory = HibernateUtilities.getSessionFactory();
@@ -58,7 +56,7 @@ public class TransaksiDao {
     }
 
 
-    // GET BY NOMOR BON
+    // GET BY NOMOR BON HEADER
     public TransaksiHeader getByNomborBon(int nomorBon) {
         session = sessionFactory.openSession();
         Query query = session
@@ -67,6 +65,7 @@ public class TransaksiDao {
 
         return (TransaksiHeader) query.uniqueResult();
     }
+
 
     // GET COUNT
     public long getCount() {

@@ -24,7 +24,7 @@ public class Barang extends Crud<Barang> implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "id_kelompok_barang", referencedColumnName = "id_kelompok")
-    private KelompokBarang idKelompokBarang;
+    private KelompokBarang kelompokBarang;
 
     @Column(name = "kode_barang", unique = true, length = 20)
     private String kodeBarang;
@@ -103,12 +103,12 @@ public class Barang extends Crud<Barang> implements Serializable {
         this.idBarang = idBarang;
     }
 
-    public KelompokBarang getIdKelompokBarang() {
-        return idKelompokBarang;
+    public KelompokBarang getKelompokBarang() {
+        return kelompokBarang;
     }
 
-    public void setIdKelompokBarang(KelompokBarang idKelompokBarang) {
-        this.idKelompokBarang = idKelompokBarang;
+    public void setKelompokBarang(KelompokBarang idKelompokBarang) {
+        this.kelompokBarang = idKelompokBarang;
     }
 
     public String getKodeBarang() {

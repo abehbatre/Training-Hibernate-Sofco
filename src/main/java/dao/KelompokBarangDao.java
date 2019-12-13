@@ -5,11 +5,9 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import utils.HibernateUtilities;
-import utils.Repository;
 
 import java.util.List;
 
-@Repository(KelompokBarang.class)
 public class KelompokBarangDao {
     private SessionFactory sessionFactory = HibernateUtilities.getSessionFactory();
     private Session session;

@@ -11,5 +11,15 @@ C:/Users/Desktop/IdeaProjects/training_hibernate_tiga/src/main/resources/hiberna
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://scorpio.sofco:6543/dbtraining</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="hibernate-annotation.cfg.xml/Hibernate" uuid="983887a9-119b-46a1-9c2e-dcfc9ad98d59">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/Desktop/IdeaProjects/training_hibernate_tiga/src/main/resources/hibernate-annotation.cfg.xml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://scorpio.sofco:6543/dbtraining</jdbc-url>
+    </data-source>
   </component>
 </project>

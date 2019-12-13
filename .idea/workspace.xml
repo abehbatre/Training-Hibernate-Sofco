@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80bcfe40-d41d-4b45-bb5b-603c12c62971" name="Default Changelist" comment="" />
+    <list default="true" id="80bcfe40-d41d-4b45-bb5b-603c12c62971" name="Default Changelist" comment="add git ignore">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fbd5209c-541a-4ec6-8122-e4a78f376c81.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fbd5209c-541a-4ec6-8122-e4a78f376c81.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/system.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/system.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bl/BarangBL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bl/BarangBL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bl/KelompokBarangBL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bl/KelompokBarangBL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bl/TransaksiBL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bl/TransaksiBL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/BarangDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/BarangDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/KelompokBarangDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/KelompokBarangDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TransaksiDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TransaksiDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Barang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Barang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/KelompokBarang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/KelompokBarang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presentation/MenuBarang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/MenuBarang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presentation/MenuKelompokBarang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/MenuKelompokBarang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/BusinessLogic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Repository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bl/KelompokBarangBL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bl/KelompokBarangBL.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/BarangDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/BarangDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/KelompokBarangDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/KelompokBarangDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/Barang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/Barang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/KelompokBarang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/KelompokBarang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/TransaksiDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/TransaksiDetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/TransaksiHeader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/TransaksiHeader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate-annotation.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate-annotation.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/presentation/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/presentation/MainMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/presentation/MenuBarang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/presentation/MenuBarang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/presentation/MenuKelompokBarang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/presentation/MenuKelompokBarang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/presentation/MenuTransaksi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/presentation/MenuTransaksi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/AppHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/AppHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/BusinessLogic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/Dao.class" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +98,26 @@
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="hibernate.cfg.xml/Hibernate" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="dbtraining: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="adit_master_transaksi_detail: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="hibernate.cfg.xml/Hibernate" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="dbtraining: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="adit_master_transaksi_header: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="PostgreSQL - dbtraining@scorpio.sofco" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
@@ -111,6 +168,20 @@
     </expand>
     <select />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="training_hibernate_tiga" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="JavaeeView">
     <option name="frameworksView" value="false" />
   </component>
@@ -122,18 +193,26 @@
     </option>
   </component>
   <component name="ProjectId" id="1Urb7O9Aiqx9WBu2BLn55oTXJ8p" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/src/test/java/AditTest.java" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../transaksiBarangTirta" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TJA" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="entity" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="dao" />
     </key>
@@ -193,10 +272,58 @@
       <workItem from="1576118118596" duration="6107000" />
       <workItem from="1576126625195" duration="823000" />
       <workItem from="1576132631685" duration="10955000" />
+      <workItem from="1576147839248" duration="2129000" />
+      <workItem from="1576201474666" duration="8396000" />
+      <workItem from="1576209950015" duration="350000" />
+      <workItem from="1576210457808" duration="2353000" />
+      <workItem from="1576218131370" duration="4154000" />
     </task>
+    <task id="LOCAL-00001" summary="checkpoint I">
+      <created>1576206853976</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576206853976</updated>
+    </task>
+    <task id="LOCAL-00002" summary="checkpoint 2 + add ignore file">
+      <created>1576210085975</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576210085975</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add git ignore">
+      <created>1576210120721</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1576210120721</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="checkpoint 1" />
+    <MESSAGE value="checkpoint I" />
+    <MESSAGE value="checkpoint 2" />
+    <MESSAGE value="add git ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="add git ignore" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

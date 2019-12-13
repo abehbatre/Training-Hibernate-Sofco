@@ -19,7 +19,6 @@ class MenuBarang {
     private static final String TAG = "-- MASTER BARANG --";
     private static final Scanner input = new Scanner(System.in);
 
-
     private BarangBL barangBL;
     private BarangDao barangDao;
     private Barang barang;
@@ -76,7 +75,7 @@ class MenuBarang {
         for (Barang barang : barangs) {
             System.out.println(DELI);
             System.out.println("ID Barang :                 " + barang.getIdBarang());
-            System.out.println("ID Kelompok Barang :        " + barang.getIdKelompokBarang());
+            System.out.println("ID Kelompok Barang :        " + barang.getKelompokBarang().getIdKelompokBarang());
             System.out.println("Kode Barang :               " + barang.getKodeBarang());
             System.out.println("Nama Barang :               " + barang.getNamaBarang());
             System.out.println("Unit 1 :                    " + barang.getUnit1());
@@ -86,7 +85,7 @@ class MenuBarang {
             System.out.println("Unit Stok :                 " + barang.getUnitStok());
         }
 
-        System.out.println("Input Id Barang untuk cari Barang Tertentu : ");
+        System.out.println("Input Nama Barang untuk cari Barang Tertentu : ");
         String s = input.next();
         showByName(s);
     }
@@ -94,12 +93,11 @@ class MenuBarang {
     /* -- SHOW BY NAME -- */
     private void showByName(String s) {
         barangDao = new BarangDao();
-        barangDao = new BarangDao();
         barang = barangDao.getByName(s);
 
         System.out.println(DELI);
         System.out.println("ID Barang :                 " + barang.getIdBarang());
-        System.out.println("ID Kelompok Barang :        " + barang.getIdKelompokBarang());
+        System.out.println("ID Kelompok Barang :        " + barang.getKelompokBarang());
         System.out.println("Kode Barang :               " + barang.getKodeBarang());
         System.out.println("Nama Barang :               " + barang.getNamaBarang());
         System.out.println("Unit 1 :                    " + barang.getUnit1());
@@ -124,7 +122,7 @@ class MenuBarang {
         System.out.print("Nama barang        : ");
         barang.setNamaBarang(input.next());
         System.out.print("Id kelompok barang : ");
-        barang.setIdKelompokBarang((KelompokBarang) session.load(KelompokBarang.class, input.nextLong()));
+        barang.setKelompokBarang((KelompokBarang) session.load(KelompokBarang.class, input.nextLong()));
         System.out.print("Unit 1             : ");
         barang.setUnit1(input.next());
         System.out.print("Konversi 1 ke 2    : ");
@@ -158,7 +156,7 @@ class MenuBarang {
         System.out.print("Nama barang        : ");
         barang.setNamaBarang(input.next());
         System.out.print("Id kelompok barang : ");
-        barang.setIdKelompokBarang((KelompokBarang) session.load(KelompokBarang.class, input.nextLong()));
+        barang.setKelompokBarang((KelompokBarang) session.load(KelompokBarang.class, input.nextLong()));
         System.out.print("Unit 1             : ");
         barang.setUnit1(input.next());
         System.out.print("Konversi 1 ke 2    : ");
