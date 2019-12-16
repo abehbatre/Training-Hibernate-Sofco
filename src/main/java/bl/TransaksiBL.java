@@ -110,7 +110,7 @@ public class TransaksiBL {
         detail.setJumlahDalamStok(total);
     }
 
-    private void setNomorBonDiDetail(TransaksiDetail detail, int nomorBon) {
+    public void setNomorBonDiDetail(TransaksiDetail detail, int nomorBon) {
         SessionFactory sessionFactory = HibernateUtilities.getSessionFactory();
         Session session = sessionFactory.openSession();
 

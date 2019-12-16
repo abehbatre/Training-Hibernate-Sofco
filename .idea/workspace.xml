@@ -1,43 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80bcfe40-d41d-4b45-bb5b-603c12c62971" name="Default Changelist" comment="add git ignore">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fbd5209c-541a-4ec6-8122-e4a78f376c81.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fbd5209c-541a-4ec6-8122-e4a78f376c81.xml" afterDir="false" />
+    <list default="true" id="80bcfe40-d41d-4b45-bb5b-603c12c62971" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/system.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/system.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bl/BarangBL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bl/BarangBL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bl/KelompokBarangBL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bl/KelompokBarangBL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bl/TransaksiBL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bl/TransaksiBL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/BarangDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/BarangDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/KelompokBarangDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/KelompokBarangDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TransaksiDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TransaksiDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Barang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Barang.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entity/KelompokBarang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/KelompokBarang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/presentation/MenuBarang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/MenuBarang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/presentation/MenuKelompokBarang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/MenuKelompokBarang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/BusinessLogic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Repository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bl/KelompokBarangBL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bl/KelompokBarangBL.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/BarangDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/BarangDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/KelompokBarangDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/KelompokBarangDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/Barang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/Barang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/KelompokBarang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/KelompokBarang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/TransaksiDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/TransaksiDetail.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/TransaksiHeader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/TransaksiHeader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate-annotation.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate-annotation.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/presentation/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/presentation/MainMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/presentation/MenuBarang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/presentation/MenuBarang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/presentation/MenuKelompokBarang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/presentation/MenuKelompokBarang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/presentation/MenuTransaksi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/presentation/MenuTransaksi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/AppHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/AppHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/BusinessLogic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/Dao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presentation/MenuTransaksi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/MenuTransaksi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate-annotation.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate-annotation.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bl/KelompokBarangBL.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/BarangDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/KelompokBarangDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/Barang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/KelompokBarang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/TransaksiDetail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/TransaksiHeader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate-annotation.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/presentation/MainMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/presentation/MenuBarang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/presentation/MenuKelompokBarang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/presentation/MenuTransaksi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/AppException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/AppHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/HibernateUtilities.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -276,7 +265,10 @@
       <workItem from="1576201474666" duration="8396000" />
       <workItem from="1576209950015" duration="350000" />
       <workItem from="1576210457808" duration="2353000" />
-      <workItem from="1576218131370" duration="4154000" />
+      <workItem from="1576218131370" duration="5640000" />
+      <workItem from="1576413030183" duration="650000" />
+      <workItem from="1576463143228" duration="4264000" />
+      <workItem from="1576470667673" duration="1147000" />
     </task>
     <task id="LOCAL-00001" summary="checkpoint I">
       <created>1576206853976</created>
@@ -299,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576210120721</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="checkpoint III">
+      <created>1576222368512</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1576222368512</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,11 +318,13 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="checkpoint 1" />
     <MESSAGE value="checkpoint I" />
     <MESSAGE value="checkpoint 2" />
     <MESSAGE value="add git ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add git ignore" />
+    <MESSAGE value="checkpoint III" />
+    <option name="LAST_COMMIT_MESSAGE" value="checkpoint III" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

@@ -11,7 +11,7 @@ public class BarangBL {
 
     /* -- INSERT --*/
     public void postInsert(Barang pojo) {
-        checkDuplicateId(pojo.getIdBarang());
+        checkDuplicateCode(pojo.getKodeBarang());
         barang.insert(pojo);
     }
 
@@ -38,9 +38,9 @@ public class BarangBL {
     // # PRIVATE METHOD --
     // --------------------------------------------------------------------------------------------------
     @SneakyThrows
-    private void checkDuplicateId(long id) {
+    private void checkDuplicateCode(String kode) {
         BarangDao barangDao = new BarangDao();
-        Barang barang = barangDao.getById(id);
+        Barang barang = barangDao.getByKode(kode);
         if (barang != null) {
             throw new AppException("kode barang sudah ada, silahkan input dengan Kode yang lain.");
         }
@@ -51,9 +51,9 @@ public class BarangBL {
         BarangDao barangDao = new BarangDao();
         Barang barang = barangDao.getById(id);
         String status = barang.getActiveFlag();
-        if (status.equalsIgnoreCase("Y")) {
-            throw new AppException("Status barang aktif, tidak dapat di hapus.");
-        }
+            if (status.equalsIgnoreCase("Y")) {
+                throw new AppException("Status barang aktif, tidak dapat di hapus.");
+            }
     }
 
     @SneakyThrows

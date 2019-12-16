@@ -60,7 +60,7 @@ public class KelompokBarang extends Crud<KelompokBarang> implements Serializable
         tx = session.beginTransaction();
         session.save(entity);
         tx.commit();
-        // sessionFactory.close();
+        sessionFactory.close();
     }
 
     @Override
@@ -71,7 +71,7 @@ public class KelompokBarang extends Crud<KelompokBarang> implements Serializable
         tx = session.beginTransaction();
         session.update(entity);
         tx.commit();
-        // sessionFactory.close();
+        sessionFactory.close();
     }
 
     @Override
@@ -82,7 +82,7 @@ public class KelompokBarang extends Crud<KelompokBarang> implements Serializable
         tx = session.beginTransaction();
         session.delete(entity);
         tx.commit();
-        // sessionFactory.close();
+        sessionFactory.close();
     }
 
 
